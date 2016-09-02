@@ -1,0 +1,29 @@
+<%= form_for(@fale_conosco) do |f| %>
+  <% if @fale_conosco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fale_conosco.errors.count, "error") %> prohibited this fale_conosco from being saved:</h2>
+
+      <ul>
+      <% @fale_conosco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mensagem %><br>
+    <%= f.text_area :mensagem %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

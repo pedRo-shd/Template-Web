@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @fale_conosco.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fale_conosco.email %>
+</p>
+
+<p>
+  <strong>Mensagem:</strong>
+  <%= @fale_conosco.mensagem %>
+</p>
+
+<%= link_to 'Edit', edit_fale_conosco_path(@fale_conosco) %> |
+<%= link_to 'Back', new_fale_conosco_path %>
